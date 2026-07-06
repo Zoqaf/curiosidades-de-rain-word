@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -189,6 +188,32 @@
             border-bottom: 1px solid #eaecf0;
         }
 
+        /* --- IMAGENS FLUTUANTES NO TEXTO --- */
+        .thumb {
+            border: 1px solid #c8ccd1;
+            background-color: #f8f9fa;
+            padding: 3px;
+            margin: 0.5em 0 1.3em 1.4em;
+            font-size: 88%;
+            float: right;
+            clear: right;
+            width: 300px;
+        }
+
+        .thumb img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #c8ccd1;
+        }
+
+        .thumbcaption {
+            border: none;
+            text-align: left;
+            line-height: 1.4em;
+            padding: 3px;
+            font-size: 85%;
+        }
+
         /* --- SUMÁRIO DE CONTEÚDO (TOC) --- */
         .toc {
             background-color: #f8f9fa;
@@ -228,6 +253,7 @@
             border-bottom: 1px solid #a2a9b1;
             margin-top: 1.8rem;
             margin-bottom: 0.5rem;
+            clear: left;
         }
 
         .mw-editsection {
@@ -240,11 +266,6 @@
         p {
             margin-bottom: 0.8rem;
             text-align: justify;
-        }
-
-        ul.wiki-list {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
         }
 
         /* Links estilo Wiki */
@@ -306,7 +327,7 @@
             <aside class="infobox">
                 <div class="infobox-title">Rain World</div>
                 
-                <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=300" alt="Slugcat Art" class="infobox-image">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/1967625957789028926_0" alt="Slugcat em Rain World" class="infobox-image">
                 
                 <table>
                     <tr>
@@ -332,7 +353,7 @@
                 </table>
             </aside>
 
-            <p><b>Rain World</b> é um jogo de sobrevivência ambientado em um ecossistema industrial em ruínas. O jogador controla o <span class="wiki-link">Slugcat</span>, uma criatura que está na parte inferior da cadeia alimentar e precisa caçar comida enquanto evita predadores e foge de chuvas esmagadoras.</p>
+            <p><b>Rain World</b> é um jogo de sobrevivência ambientado num ecossistema industrial em ruínas. O jogador controla o <span class="wiki-link">Slugcat</span>, uma criatura que está na parte inferior da cadeia alimentar e precisa caçar comida enquanto evita predadores e foge de chuvas esmagadoras.</p>
 
             <div class="toc">
                 <h2>Sumário</h2>
@@ -344,13 +365,19 @@
             </div>
 
             <h2 id="animacao" class="section-title">Animação Procedural <span class="mw-editsection">[<a href="#" class="wiki-link">editar</a>]</span></h2>
+            
+            <div class="thumb">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/1967625957789028926_1" alt="Movimentação no jogo">
+                <div class="thumbcaption">Exemplo da movimentação física e dinâmica das criaturas pelos cenários complexos do jogo.</div>
+            </div>
+
             <p>Diferente de jogos comuns de plataforma, as criaturas em Rain World não usam animações pré-desenhadas frame por frame. O movimento é gerado em tempo real usando física e matemática. Isso faz com que os corpos dos personagens reajam de forma realista a quedas, colisões e superfícies.</p>
 
             <h2 id="ia" class="section-title">Inteligência Artificial Avançada <span class="mw-editsection">[<a href="#" class="wiki-link">editar</a>]</span></h2>
-            <p>Os inimigos do jogo, especialmente os <span class="wiki-link red-link">Lagartos</span>, possuem personalidades próprias geradas aleatoriamente. Alguns são naturalmente mais agressivos, enquanto outros são covardes. O jogo também possui um sistema de reputação: se você alimentar um lagarto ou salvá-lo, ele pode virar seu companheiro.</p>
+            <p>Os inimigos do jogo, especialmente os <span class="wiki-link red-link">Lagartos</span>, possuem personalidades próprias geradas aleatoriamente. Alguns são naturalmente mais agressivos, enquanto outros são mais cautelosos ou covardes. O jogo também possui um sistema de reputação: se alimentares um lagarto ou se o salvares de um predador maior, ele pode virar teu companheiro.</p>
 
             <h2 id="chuva" class="section-title">O Peso Real da Chuva <span class="mw-editsection">[<a href="#" class="wiki-link">editar</a>]</span></h2>
-            <p>A chuva que encerra cada ciclo não é apenas um efeito de tela para dar Game Over. Conforme o tempo acaba, o motor de física do jogo começa a dar peso real às gotas de água. A força acumulada da tempestade esmaga o corpo do personagem contra o chão, destruindo seus movimentos antes mesmo dele se afogar.</p>
+            <p>A chuva que encerra cada ciclo não é apenas um efeito visual para dar Game Over. Conforme o tempo acaba, o motor de física do jogo começa a dar peso real às gotas de água. A força acumulada da tempestade esmaga o corpo do personagem contra o chão, destruindo os seus movimentos antes mesmo de ele se afogar nas superfícies inundadas.</p>
 
         </main>
     </div>
