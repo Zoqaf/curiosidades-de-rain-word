@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades de Rain World — RainWiki</title>
+    <style>
+        /* --- ESTILO GERAL (ESTILO MEDIAWIKI / MIRAHEZE) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #f6f6f6;
+            color: #202122;
+            font-size: 14px;
+            line-height: 1.6;
+            display: flex;
+        }
+
+        /* --- BARRA LATERAL (SIDEBAR) --- */
+        nav.sidebar {
+            width: 11em;
+            padding: 1em 0.5em;
+            flex-shrink: 0;
+        }
+
+        nav.sidebar .logo {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #000;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 0.5rem;
+            font-family: 'Linux Libertine', 'Georgia', serif;
+        }
+
+        nav.sidebar h3 {
+            font-size: 0.75rem;
+            color: #54595d;
+            text-transform: uppercase;
+            margin: 0.8rem 0 0.3rem 0;
+            padding-left: 0.25rem;
+            font-weight: normal;
+        }
+
+        nav.sidebar ul {
+            list-style: none;
+            border-bottom: 1px solid #eaecf0;
+            padding-bottom: 0.5rem;
+        }
+
+        nav.sidebar a {
+            display: block;
+            color: #0645ad;
+            text-decoration: none;
+            padding: 0.2rem 0.25rem;
+            font-size: 0.85rem;
+        }
+
+        nav.sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- ÁREA PRINCIPAL DO CONTEÚDO --- */
+        .main-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Abas superiores estilo Wiki (Página, Discussão, Ler, Editar...) */
+        .wiki-tabs {
+            background-color: #f6f6f6;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0.5rem;
+            padding-left: 2.5rem;
+        }
+
+        .tabs-left, .tabs-right {
+            display: flex;
+        }
+
+        .tab {
+            background-color: #f6f6f6;
+            border: 1px solid transparent;
+            padding: 0.3rem 0.7rem;
+            font-size: 0.85rem;
+            color: #0645ad;
+            cursor: pointer;
+            margin-right: 0.2rem;
+            border-bottom: none;
+        }
+
+        .tab.active {
+            background-color: #ffffff;
+            border-color: #a2a9b1;
+            color: #202122;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+            margin-bottom: -1px;
+        }
+
+        .tab:hover:not(.active) {
+            background-color: #f8f9fa;
+            text-decoration: none;
+        }
+
+        /* Corpo da Página da Wiki */
+        main.wiki-content {
+            background-color: #ffffff;
+            border-left: 1px solid #a2a9b1;
+            border-bottom: 1px solid #a2a9b1;
+            padding: 1.5em 2.5em;
+            flex-grow: 1;
+        }
+
+        /* Cabeçalho do Artigo */
+        h1.firstHeading {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-size: 1.8rem;
+            font-weight: normal;
+            border-bottom: 1px solid #a2a9b1;
+            margin-bottom: 0.2em;
+            padding-bottom: 0.25em;
+        }
+
+        .siteSub {
+            font-size: 0.8rem;
+            color: #54595d;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- INFOBOX (CAIXA DE DETALHES DA DIREITA) --- */
+        .infobox {
+            border: 1px solid #a2a9b1;
+            background-color: #f8f9fa;
+            color: #202122;
+            margin: 0 0 1em 1em;
+            padding: 0.3em;
+            float: right;
+            clear: right;
+            width: 22em;
+            font-size: 88%;
+        }
+
+        .infobox-title {
+            font-size: 125%;
+            font-weight: bold;
+            text-align: center;
+            background-color: #eaecf0;
+            padding: 0.3em;
+            border-bottom: 1px solid #a2a9b1;
+        }
+
+        .infobox-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0.5rem auto;
+            border: 1px solid #a2a9b1;
+        }
+
+        .infobox table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.5rem;
+        }
+
+        .infobox th {
+            text-align: left;
+            vertical-align: top;
+            width: 35%;
+            padding: 0.4em;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+        .infobox td {
+            vertical-align: top;
+            padding: 0.4em;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+        /* --- SUMÁRIO DE CONTEÚDO (TOC) --- */
+        .toc {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 0.5rem 1rem;
+            margin: 1rem 0;
+            display: inline-block;
+            min-width: 220px;
+        }
+
+        .toc h2 {
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .toc ol {
+            list-style-position: inside;
+            font-size: 0.85rem;
+        }
+
+        .toc a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- FORMATAÇÃO DE TEXTO --- */
+        h2.section-title {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-size: 1.5rem;
+            font-weight: normal;
+            border-bottom: 1px solid #a2a9b1;
+            margin-top: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .mw-editsection {
+            font-size: 0.75rem;
+            font-weight: normal;
+            margin-left: 0.5em;
+            font-family: sans-serif;
+        }
+
+        p {
+            margin-bottom: 0.8rem;
+            text-align: justify;
+        }
+
+        ul.wiki-list {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Links estilo Wiki */
+        .wiki-link {
+            color: #0645ad;
+            text-decoration: none;
+        }
+
+        .wiki-link:hover {
+            text-decoration: underline;
+        }
+
+        .red-link {
+            color: #ba0000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="logo">RainWiki</div>
+        
+        <h3>Navegação</h3>
+        <ul>
+            <li><a href="#">Página principal</a></li>
+            <li><a href="#">Portal da comunidade</a></li>
+            <li><a href="#">Mudanças recentes</a></li>
+            <li><a href="#">Página aleatória</a></li>
+        </ul>
+
+        <h3>Ferramentas</h3>
+        <ul>
+            <li><a href="#">Páginas afluentes</a></li>
+            <li><a href="#">Carregar arquivo</a></li>
+            <li><a href="#">Páginas especiais</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        
+        <div class="wiki-tabs">
+            <div class="tabs-left">
+                <div class="tab active">Página</div>
+                <div class="tab">Discussão</div>
+            </div>
+            <div class="tabs-right">
+                <div class="tab active">Ler</div>
+                <div class="tab">Ver código-fonte</div>
+                <div class="tab">Ver histórico</div>
+            </div>
+        </div>
+
+        <main class="wiki-content">
+            
+            <h1 class="firstHeading">Curiosidades de Rain World</h1>
+            <div class="siteSub">Origem: RainWiki, a enciclopédia livre de sobrevivência.</div>
+
+            <aside class="infobox">
+                <div class="infobox-title">Rain World</div>
+                
+                <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=300" alt="Slugcat Art" class="infobox-image">
+                
+                <table>
+                    <tr>
+                        <th>Desenvolvedor:</th>
+                        <td><span class="wiki-link">Videocult</span></td>
+                    </tr>
+                    <tr>
+                        <th>Distribuidora:</th>
+                        <td>Akupara Games</td>
+                    </tr>
+                    <tr>
+                        <th>Gênero:</th>
+                        <td>Plataforma, Survival</td>
+                    </tr>
+                    <tr>
+                        <th>Lançamento:</th>
+                        <td>28 de março de 2017</td>
+                    </tr>
+                    <tr>
+                        <th>Plataformas:</th>
+                        <td>PC, PS4, Switch, Xbox</td>
+                    </tr>
+                </table>
+            </aside>
+
+            <p><b>Rain World</b> é um jogo de sobrevivência ambientado em um ecossistema industrial em ruínas. O jogador controla o <span class="wiki-link">Slugcat</span>, uma criatura que está na parte inferior da cadeia alimentar e precisa caçar comida enquanto evita predadores e foge de chuvas esmagadoras.</p>
+
+            <div class="toc">
+                <h2>Sumário</h2>
+                <ol>
+                    <li><a href="#animacao">1 Animação Procedural</a></li>
+                    <li><a href="#ia">2 Inteligência Artificial Avançada</a></li>
+                    <li><a href="#chuva">3 O Peso Real da Chuva</a></li>
+                </ol>
+            </div>
+
+            <h2 id="animacao" class="section-title">Animação Procedural <span class="mw-editsection">[<a href="#" class="wiki-link">editar</a>]</span></h2>
+            <p>Diferente de jogos comuns de plataforma, as criaturas em Rain World não usam animações pré-desenhadas frame por frame. O movimento é gerado em tempo real usando física e matemática. Isso faz com que os corpos dos personagens reajam de forma realista a quedas, colisões e superfícies.</p>
+
+            <h2 id="ia" class="section-title">Inteligência Artificial Avançada <span class="mw-editsection">[<a href="#" class="wiki-link">editar</a>]</span></h2>
+            <p>Os inimigos do jogo, especialmente os <span class="wiki-link red-link">Lagartos</span>, possuem personalidades próprias geradas aleatoriamente. Alguns são naturalmente mais agressivos, enquanto outros são covardes. O jogo também possui um sistema de reputação: se você alimentar um lagarto ou salvá-lo, ele pode virar seu companheiro.</p>
+
+            <h2 id="chuva" class="section-title">O Peso Real da Chuva <span class="mw-editsection">[<a href="#" class="wiki-link">editar</a>]</span></h2>
+            <p>A chuva que encerra cada ciclo não é apenas um efeito de tela para dar Game Over. Conforme o tempo acaba, o motor de física do jogo começa a dar peso real às gotas de água. A força acumulada da tempestade esmaga o corpo do personagem contra o chão, destruindo seus movimentos antes mesmo dele se afogar.</p>
+
+        </main>
+    </div>
+
+</body>
+</html>
